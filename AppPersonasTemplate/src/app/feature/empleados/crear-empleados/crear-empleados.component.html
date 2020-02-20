@@ -1,1 +1,16 @@
-<Button text="crear-empleados works!" class="btn btn-primary"></Button>
+<ns-action-bar title="Create employee"></ns-action-bar>
+<FlexboxLayout class="form">
+    <StackLayout class="input-field">
+        <Label text="Nombre" class="label"></Label>
+        <TextField class="input"></TextField>
+    </StackLayout>
+    <StackLayout class="input-field">
+        <Label text="Edad" class="label"></Label>
+        <TextField keyboardType="number" class="input"></TextField>
+    </StackLayout>
+    <StackLayout class="input-field">
+        <Label text="Salario" class="label"></Label>
+        <TextField keyboardType="number" class="input"></TextField>
+    </StackLayout>
+    <Button text="Crear!" class="btn btn-primary" pageTransition="slideLeft"></Button>
+</FlexboxLayout>

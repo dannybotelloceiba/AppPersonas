@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
 import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
+import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
     bootstrap: [
@@ -15,7 +16,8 @@ import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
         NativeScriptModule,
         AppRoutingModule,
         NativeScriptFormsModule,
-        NativeScriptHttpClientModule
+        NativeScriptHttpClientModule,
+        SharedModule
     ],
     declarations: [
         AppComponent,
