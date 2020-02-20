@@ -1,1 +1,14 @@
-<Button text="listar-empleados works!" class="btn btn-primary"></Button>
+<StackLayout>
+    <Button text="Crear nuevo empleado!" class="btn btn-primary" (tap)="goCrearEmpleado()"></Button>
+    <FlexboxLayout flexDirection="column">
+        <ListView [items]="empleados" (itemTap)="onItemTap()" iosEstimatedRowHeigh="65">
+            <ng-template let-employee="item" let-i="index">
+                <GridLayout rows="40,auto" columns="2*,*">
+                    <Label [text]="employee.employee_name" row="0" rowSpan="2"></Label>
+                    <Label [text]="employee.employee_age" row="1" col="0"></Label>
+                    <Label [text]="employee.employee_salary" row="1" col="1"></Label>
+                </GridLayout>
+            </ng-template>
+        </ListView>
+    </FlexboxLayout>
+</StackLayout>
