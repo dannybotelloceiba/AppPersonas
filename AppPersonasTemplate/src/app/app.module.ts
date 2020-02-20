@@ -14,7 +14,8 @@ import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
     imports: [
         NativeScriptModule,
         AppRoutingModule,
-        NativeScriptFormsModule,NativeScriptHttpClientModule
+        NativeScriptFormsModule,
+        NativeScriptHttpClientModule
     ],
     declarations: [
         AppComponent,

@@ -25,7 +25,7 @@ export class ListarEmpleadosComponent implements OnInit {
     }
 
     goCrearEmpleado(): void {
-        this.router.navigate(["/crear"], { transition: { name: "slideLeft" } });
+        this.router.navigate(["/home/crear"], { transition: { name: "slideLeft" } });
     }
 
     onItemTap(args: ItemEventData) {
