@@ -14,14 +14,15 @@ export class LoginComponent implements OnInit {
   isLoggingIn = true;
   user: Usuario;
   processing = false;
-  @ViewChild("password", {static: false}) password: ElementRef;
+  usuario: string;
+  clave:string;
+  @ViewChild("clave", {static: false}) password: ElementRef;
 
 
   constructor(private page: Page, private routerExtensions: RouterExtensions) { 
     this.page.actionBarHidden = true;
     this.user = new Usuario();
-    this.user.usuario = "user@nativescript.org";
-    this.user.clave = "password";
+   
   }
 
   ngOnInit(): void {
@@ -33,14 +34,18 @@ export class LoginComponent implements OnInit {
 }
 
 submit() {
-  if (!this.user.usuario || !this.user.clave) {
+ /* if (!this.user.usuario || !this.user.clave) {
       this.alert("Please provide both an email address and password.");
       return;
-  }
+  }*/
 
   this.processing = true;
-  if (this.isLoggingIn) {
-      this.login();}
+  this.delay(3000).then(any=>{
+   
+    if (this.isLoggingIn) {
+        this.login();}
+});
+ 
 }
 
 login() {
@@ -66,6 +71,10 @@ alert(message: string) {
       okButtonText: "OK",
       message: message
   });
+}
+
+async delay(ms: number) {
+  await new Promise(resolve => setTimeout(()=>resolve(), ms)).then(()=>console.log("fired"));
 }
 
 }
