@@ -1,11 +1,12 @@
 import { NgModule,NgModuleFactoryLoader, NO_ERRORS_SCHEMA } from "@angular/core";
+import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
+import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular/side-drawer-directives"
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
-import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
@@ -17,6 +18,7 @@ import { SharedModule } from "./shared/shared.module";
         AppRoutingModule,
         NativeScriptFormsModule,
         NativeScriptHttpClientModule,
+        NativeScriptUISideDrawerModule,
         SharedModule
     ],
     declarations: [
