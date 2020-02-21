@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { isAndroid, Page } from 'tns-core-modules/ui/page'
 import { RouterExtensions } from 'nativescript-angular/router';
+import { UIService } from '../../services/ui.service';
 
 declare var android: any;
 
@@ -13,7 +14,7 @@ export class ActionBarComponent implements OnInit {
 
     @Input() title: string;
 
-    constructor(private page: Page, private router: RouterExtensions) { }
+    constructor(private page: Page, private router: RouterExtensions, private uiService: UIService) { }
 
     ngOnInit(): void {
     }
@@ -22,7 +23,7 @@ export class ActionBarComponent implements OnInit {
         return this.router.canGoBack();
     }
 
-    onGoBack(){
+    onGoBack() {
         this.router.backToPreviousPage();
     }
 
@@ -34,5 +35,13 @@ export class ActionBarComponent implements OnInit {
                 backButton.setColorFilter(android.graphics.Color.parseColor("#ffffff"), (<any>android.graphics).PorterDuff.Mode.SRC_ATOP);
             }
         }
+    }
+
+    get isAndroid() {
+        return isAndroid;
+    }
+
+    activarDrawer(){
+        this.uiService.activarDrawer();
     }
 }
