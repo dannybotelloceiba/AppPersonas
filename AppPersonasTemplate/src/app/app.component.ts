@@ -36,7 +36,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
         }
     }
 
-    logout(){
+    tapDrawer(){
         this.uiService.activarDrawer();
     }
 }

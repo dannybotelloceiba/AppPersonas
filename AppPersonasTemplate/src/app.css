@@ -36,6 +36,31 @@ Button.-primary {
 }
 
 .drawer-container {
-    background: linear-gradient(140deg, #E1E2E1, #ff1744);
+    /*background: linear-gradient(140deg, #E1E2E1, #ff1744);*/
+    background-color: #E1E2E1;
     width: 80%;
+}
+
+.sidedrawer-content {
+
+}
+
+.sidedrawer-header {
+    background-color: #ff1744;
+    padding-top: 100;
+}
+
+.sidedrawer-header Label {
+    padding-left: 15;
+}
+
+.sidedrawer-list-item {
+    color: #022734;
+    margin-top: 25;
+    padding-left: 15;
+    vertical-align: center;
+}
+
+.sidedrawer-list-item fa {
+    margin-right: 10;
 }

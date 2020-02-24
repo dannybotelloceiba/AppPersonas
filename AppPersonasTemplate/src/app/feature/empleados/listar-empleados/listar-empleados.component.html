@@ -1,6 +1,5 @@
 <ns-action-bar title="List of employees"></ns-action-bar>
 <StackLayout>
-    <Button text="Crear nuevo empleado!" class="btn btn-primary" (tap)="goCrearEmpleado()"></Button>
     <FlexboxLayout flexDirection="column">
         <ListView [items]="empleados" (itemTap)="onItemTap()" iosEstimatedRowHeigh="65">
             <ng-template let-employee="item" let-i="index">

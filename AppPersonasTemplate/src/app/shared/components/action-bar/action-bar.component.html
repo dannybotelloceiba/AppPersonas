@@ -3,6 +3,6 @@
     <ActionItem *ngIf="!isAndroid" ios.position="left" (tap)="activarDrawer()">
         <Label text="MENU"></Label>
     </ActionItem>
-    <NavigationButton text="Back" android.systemIcon="ic_menu_back" *ngIf="canGoBack" (tap)="onGoBack()">
+    <NavigationButton android.systemIcon="ic_menu_back" *ngIf="canGoBack" (tap)="onGoBack()">
     </NavigationButton>
 </ActionBar>
